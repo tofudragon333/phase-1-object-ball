@@ -7,15 +7,18 @@ function goodPractices() {
   for (let gameKey in game) {
     // are you ABSOLUTELY SURE what 'gameKey' is?
     // use the debugger to find out!
+    // ANSWER: 'gameKey' is "home" or "away"
     debugger
     let teamObj = game[gameKey]
     for (let teamKey in teamObj) {
       // are you ABSOLUTELY SURE what 'teamKey' is?
       // use debugger to find out!
+      // ANSWER: 'teamKey' is "teamName"
       debugger
 
       // what is 'data' at each loop through out this block?
-      // when will the following line of code work and when will it break?
+      // ANSWER: data is the 'player' object
+      // when will the following line of code work and when will it break?s
       let data = teamObj.player
       for (let key in data) {
         debugger
@@ -25,4 +28,14 @@ function goodPractices() {
 }
 
 // then, call the function so it runs!
-goodPractices()
+// goodPractices();
+
+// console.log(goodPractices());
+
+function numPointsScored(name) {
+  if (name === gameObject.player) {
+    return gameObject.player.points;
+  };
+}
+
+console.log(numPointsScored("Alan Anderson"));
